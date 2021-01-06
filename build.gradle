@@ -2,32 +2,14 @@ plugins {
     id 'java'
 }
 
-group 'fr.mcgradle'
-version '1.0'
+group 'org.example'
+version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' } //Permet d'intégrer un projet Git
 }
-
-
-/** Optional 
-
-compileJava.options.encoding = 'UTF-8'
-
-tasks.withType(JavaCompile) {
-       options.encoding = 'UTF-8'
-}
-**/
 
 dependencies {
-    // Implementation des libs de base
-    implementation fileTree('root/lib')
-
-    //Ajout de dépendance ..
-    implementation '. . .', version '. . .'
-
-    //Ajout de repos Git
-    implementation 'com.github.User:Repo:Tag'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation fileTree ('libs')
 }
-

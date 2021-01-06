@@ -1,2 +1,4 @@
-rootProject.name = 'McGralde-1.8.9'
+rootProject.name = 'Mcp_Gralde'
 
+include ':mcp'
+project(":mcp").projectDir = file("projects/mcp")
